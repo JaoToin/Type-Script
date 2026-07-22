@@ -50,8 +50,8 @@ button{
 
 #listaHTML{
     
-    
-    width: 700px;
+    max-width: 700px;
+    width: 90%;
     background-color: #ccc;
     margin: 2rem auto;
     padding: 2rem;
@@ -64,7 +64,7 @@ button{
 }
 
 .btn-remover{
-    width: 250px;
+    width: 100%;
     padding: 0.5rem;
     background-color: #007BFF;
     color: #fff;
@@ -76,3 +76,43 @@ button{
 
 }
 
+
+
+html, body {
+    height: 100%;
+    margin: 0px;
+  }
+  
+  body {
+    background-image: url('img/Code_Generated_Image.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat;
+    
+  }
+
+  /* --- Regras de Responsividade para Telas Pequenas --- */
+@media (max-width: 768px) {
+
+    /* 1. Reduz a margem grande do topo */
+    h1, h2 {
+        margin-top: 2rem;
+        font-size: 1.8rem; /* Diminui um pouco a fonte no celular */
+    }
+
+    /* 2. Deixa a lista fluida na tela do celular */
+    #listaHTML {
+        width: 90%; 
+        padding: 1rem; /* Reduz o espaçamento interno */
+    }
+
+    /* 3. Faz o botão ocupar uma largura mais adequada no card */
+    .btn-remover {
+        width: 100%; /* Ocupa a largura inteira do container pai */
+    }
+}
+
+ul{
+list-style-type: none;
+}
+  
