@@ -1,3 +1,4 @@
+// Isolamos o arquivo para evitar erros de escopo global no VS Code
 // 2. Lista de Produtos
 let listaDeProdutos = [];
 // 3. Seleção dos elementos do DOM
@@ -36,18 +37,19 @@ function atualizarListaNaTela() {
     listaHTML.innerHTML = '';
     listaDeProdutos.forEach((produto) => {
         const li = document.createElement('li');
+        // Number(produto.valor) garante que o toFixed(2) funcione mesmo se o localStorage tiver salvo como string antigamente
         li.innerHTML = `
-      <strong>${produto.nome}</strong> - R$ ${produto.valor.toFixed(2)} <br>
+      <strong>${produto.nome}</strong> - R$ ${Number(produto.valor).toFixed(2)} <br>
       <small>${produto.descricao}</small> | <em>Código: ${produto.codigo}</em>
       <button class="btn-remover" data-codigo="${produto.codigo}">❌ Remover</button>
     `;
         listaHTML.appendChild(li);
     });
-    // Salva no navegador sempre que a tela for atualizada!
     salvarNoLocalStorage();
 }
 // 8. Evento de Cadastrar
-btnCadastrar.addEventListener('click', () => {
+btnCadastrar.addEventListener('click', (event) => {
+    event.preventDefault(); // Evita recarregar a página caso esteja dentro de uma tag <form>
     const nome = inputNome.value;
     const valor = Number(inputValor.value);
     const descricao = inputDescricao.value;
@@ -73,7 +75,9 @@ listaHTML.addEventListener('click', (event) => {
         }
     }
 });
+const listarProdutos = () => {
+    return listaDeProdutos;
+};
 // 10. Inicialização da aplicação 🚀
 carregarDoLocalStorage();
 atualizarListaNaTela();
-export {};

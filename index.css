@@ -11,7 +11,7 @@ body{
     line-height: 1.6;
 }
 
-form{
+div{
     max-width: 400px;
     margin: 2rem auto;
     padding: 2rem;
@@ -22,18 +22,11 @@ form{
     border-radius: 20px;
 }
 
-h1{
+h1, h2{
     margin-top: 150px;
     font-size: 2.5rem;
     margin-bottom: 1rem;
     display: block;
-    text-align: center;
-}
-
-label{
-    display: block;
-    margin-bottom: 0.5rem;
-    font-weight: bold;
     text-align: center;
 }
 
@@ -55,24 +48,10 @@ button{
     border-radius: 10px;
 }
 
-textarea{
-    width: 100%;
-    padding: 0.5rem;
-    margin-bottom: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    resize: none;
-}
-
-img{
-    display: block;
-    margin: 0 auto;
-    height: 25px;
-}
-
-.oculto{
-    display: none;
-    width: 1000px;
+#listaHTML{
+    
+    
+    width: 700px;
     background-color: #ccc;
     margin: 2rem auto;
     padding: 2rem;
@@ -82,5 +61,18 @@ img{
     border: 1px solid #ccc;
     border-radius: 20px;
     font-size: 1.2rem;
+}
+
+.btn-remover{
+    width: 250px;
+    padding: 0.5rem;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    border-radius: 10px;
+    display: block;
+
 }
 
