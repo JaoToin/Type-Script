@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de produtos</title>
+
+    <link rel="stylesheet" href="/css/index...css">
+    <script src="/js/index...js" defer></script>
+</head>
+<body>
+
+    <!-- Cabeçalho -->
+    <header style="text-align: center; margin-bottom: 20px;">
+        <!-- Imagem do cabeçalho -->
+        <img src="/img/Design Sem Nome - 1 - Editado.png" alt="Logo ou Imagem" width="150">
+        
+        <!-- Links de navegação -->
+        <nav style="margin-top: 10px;">
+            <a href="index...html">Demonstração prática</a> |
+            <a href="https://canva.link/y1q5ehw0ppuoni7">Música</a> |
+            <a href="https://canva.link/wlox7zi6i0lv57a">Slide</a>
+        </nav>
+        
+        <h1>Sistema de Gestão</h1>
+    </header>
+
+    <!-- Corpo Principal (Flexbox usado para separar os dois asides lado a lado) -->
+    <main style="display: flex; justify-content: space-between; align-items: flex-start; padding: 20px; gap: 30px;">
+        
+        <!-- Aside 1: Formulário (Superior Esquerda) -->
+        <aside style="width: 45%;">
+            <h2>Cadastrar Produto</h2>
+            <div style="display: flex; flex-direction: column; gap: 10px;">
+                <input type="text" id="inputNome" placeholder="Nome do produto">
+                <input type="number" id="inputValor" placeholder="Valor (R$)">
+                <input type="text" id="inputDescricao" placeholder="Descrição">
+                <button id="btnCadastrar">Cadastrar Produto</button>
+            </div>
+        </aside>
+
+        <!-- Aside 2: Pesquisa e Tabela (Superior Direita) -->
+        <aside style="width: 50%;">
+            
+            <!-- Nova seção (section) para a barra de pesquisa -->
+            <section style="margin-bottom: 20px; background-color: #f9f9f9; padding: 15px; border-radius: 5px;">
+                <h3 style="margin-top: 0;">Pesquisar</h3>
+                <input type="text" id="inputPesquisa" placeholder="Pesquisar por nome ou código..." style="width: 100%; padding: 8px;">
+            </section>
+
+            <h2>Produtos Cadastrados</h2>
+            <table border="1" style="width: 100%; border-collapse: collapse; text-align: left;">
+                <thead style="background-color: #eee;">
+                    <tr>
+                        <!-- Colunas atualizadas conforme solicitado -->
+                        <th style="padding: 8px;">Código</th>
+                        <th style="padding: 8px;">Nome</th>
+                        <th style="padding: 8px;">Valor</th>
+                        <th style="padding: 8px;">Descrição</th>
+                    </tr>
+                </thead>
+                <tbody id="tabelaHTML">
+                    <!-- Os itens cadastrados aparecerão aqui -->
+                </tbody>
+            </table>
+        </aside>
+
+    </main>
+
+    <!-- Rodapé -->
+    <footer style="margin-top: 50px; text-align: center; padding: 20px; background-color: #f1f1f1;">
+        <!-- Hashtags -->
+        <p>#canva #SENAI #João #Vivian #Erick #Petrobras</p>
+        
+        <!-- Imagem/Link do Instagram -->
+        <a href="https://instagram.com/@jao_guedesxs" target="_blank" rel="noopener noreferrer">
+            <img src="/img/instagram.png" alt="Meu Instagram" width="40">
+        </a>
+    </footer>
+
+</body>
+</html>
