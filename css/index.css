@@ -1,123 +1,154 @@
-*{
+/* =========================================
+   RESET E CONFIGURAÇÕES GERAIS
+   ========================================= */
+* {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #070B1A; /* Azul escuro do fundo do slide */
+    color: #FFFFFF; /* Texto em branco */
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
-body{
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
-    line-height: 1.6;
+/* =========================================
+   CABEÇALHO E NAVEGAÇÃO
+   ========================================= */
+header {
+    background-color: transparent !important;
 }
 
-div{
-    max-width: 400px;
-    margin: 2rem auto;
-    padding: 2rem;
-    background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border: 1px solid #ccc;
-    border-radius: 20px;
+nav a {
+    color: #FF8C00; /* Laranja extraído das cruzes inferiores */
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0 5px;
+    transition: color 0.3s;
 }
 
-h1, h2{
-    margin-top: 150px;
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-    display: block;
-    text-align: center;
+nav a:hover {
+    color: #FFFFFF;
 }
 
-input[type="text"],input[type="number"]{
-    width: 100%;
-    padding: 0.5rem;
-    margin-bottom: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 10px;
+h1, h2, h3 {
+    color: #FFFFFF;
+    letter-spacing: 1px;
 }
-button{
-    width: 100%;
-    padding: 0.5rem;
-    background-color: #007BFF;
-    color: #fff;
-    border: none;
+
+/* =========================================
+   ASIDES E SEÇÕES (CORPO)
+   ========================================= */
+section {
+    background-color: #121A30 !important; /* Azul um pouco mais claro para destacar as caixas */
+    border: 1px solid #4A1A28; /* Borda com o tom vinho do círculo central */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* =========================================
+   FORMULÁRIOS (INPUTS E BOTÕES)
+   ========================================= */
+input {
+    background-color: #070B1A;
+    color: #FFFFFF;
+    border: 1px solid #FF8C00;
+    padding: 12px;
     border-radius: 4px;
-    cursor: pointer;
-    border-radius: 10px;
+    outline: none;
+    font-size: 14px;
 }
 
-button:hover{
-    background-color: rgb(255, 136, 0);
-    transform: translateY(-5px);
+input::placeholder {
+    color: #8C96AB;
 }
 
-#listaHTML{
-    
-    max-width: 700px;
-    width: 90%;
-    background-color: #ccc;
-    margin: 2rem auto;
-    padding: 2rem;
-    background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border: 1px solid #ccc;
-    border-radius: 20px;
-    font-size: 1.2rem;
+input:focus {
+    border-color: #FFFFFF;
+    box-shadow: 0 0 5px rgba(255, 140, 0, 0.5);
 }
 
-.btn-remover{
-    width: 100%;
-    padding: 0.5rem;
-    background-color: #007BFF;
-    color: #fff;
+button {
+    background-color: #FF8C00; /* Laranja de destaque */
+    color: #070B1A; /* Texto escuro para dar contraste no botão */
     border: none;
-    border-radius: 4px;
+    padding: 12px 15px;
+    font-weight: 900;
+    font-size: 16px;
     cursor: pointer;
-    border-radius: 10px;
-    display: block;
+    border-radius: 4px;
+    text-transform: uppercase;
+    transition: background-color 0.3s, transform 0.1s;
+}
 
+button:hover {
+    background-color: #FFA500;
+    transform: scale(1.02);
+}
+
+/* =========================================
+   TABELA
+   ========================================= */
+table {
+    background-color: #121A30;
+    border-color: #4A1A28 !important;
+    color: #FFFFFF;
+}
+
+thead, th {
+    background-color: #4A1A28 !important; /* Vinho escuro extraído do centro do slide */
+    color: #FFFFFF;
+    border-color: #4A1A28 !important;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+td {
+    border-color: #2A3656 !important; /* Linhas divisórias sutis */
+    padding: 10px !important;
+}
+
+/* =========================================
+   RODAPÉ
+   ========================================= */
+footer {
+    background-color: #121A30 !important;
+    color: #FFFFFF;
+    border-top: 3px solid #FF8C00; /* Linha laranja para separar o rodapé */
+}
+
+footer p {
+    color: #8C96AB;
+    font-size: 14px;
 }
 
 
-
-html, body {
-    height: 100%;
-    margin: 0px;
-  }
-  
-  body {
-    background-image: url('img/Code_Generated_Image.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: repeat;
-    
-  }
-
-  /* --- Regras de Responsividade para Telas Pequenas --- */
+/* =========================================
+   RESPONSIVIDADE (Celulares e Tablets)
+   ========================================= */
 @media (max-width: 768px) {
-
-    /* 1. Reduz a margem grande do topo */
-    h1, h2 {
-        margin-top: 2rem;
-        font-size: 1.8rem; /* Diminui um pouco a fonte no celular */
+    /* Transforma o corpo principal de duas colunas para uma coluna empilhada */
+    main {
+        flex-direction: column !important;
+        align-items: center !important;
+        padding: 10px !important;
     }
 
-    /* 2. Deixa a lista fluida na tela do celular */
-    #listaHTML {
-        width: 90%; 
-        padding: 1rem; /* Reduz o espaçamento interno */
+    /* Faz com que as duas áreas (Formulário e Tabela) ocupem 100% da tela */
+    aside {
+        width: 100% !important;
+        margin-bottom: 30px;
     }
 
-    /* 3. Faz o botão ocupar uma largura mais adequada no card */
-    .btn-remover {
-        width: 100%; /* Ocupa a largura inteira do container pai */
+    /* Permite que a tabela crie uma barra de rolagem horizontal se não couber na tela */
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    /* Ajusta a barra de pesquisa para telas menores */
+    section {
+        padding: 10px !important;
     }
 }
-
-ul{
-list-style-type: none;
-}
-  
